@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: yes
+
+  tasks:
+    - name: Assemble files
+      assemble:
+        remote_src: False
+        src: private/ansible/files
+        dest: /tmp/combined
